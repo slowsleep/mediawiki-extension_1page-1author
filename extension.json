@@ -1,0 +1,16 @@
+{
+    "name": "OnlyAuthorCanEditPage",
+    "version": "1.0",
+    "author": "Yana Alekseeva",
+    "description": "Restricts editing of pages to their creators and administrators.",
+    "license-name": "GPL-2.0-or-later",
+    "type": "other",
+    "AutoloadClasses": {
+		"OnlyAuthorCanEditPage": "includes/OnlyAuthorCanEditPage.php"
+	},
+    "Hooks": {
+        "getUserPermissionsErrors": "OnlyAuthorCanEditPage::onGetUserPermissionsErrors",
+        "PageSaveComplete": "OnlyAuthorCanEditPage::onPageSaveComplete"
+    },
+    "manifest_version": 2
+}
